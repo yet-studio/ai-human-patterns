@@ -65,11 +65,13 @@ cat > src/index.html << 'EOL'
     <!-- Navigation -->
     <header class="flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-white border-b border-gray-200 text-sm py-3 sm:py-0 dark:bg-gray-800 dark:border-gray-700">
         <!-- Navbar content here -->
+        nav
     </header>
 
     <!-- Content -->
     <main class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10">
         <!-- Main content here -->
+        test content
     </main>
 
     <!-- Scripts -->
@@ -132,3 +134,129 @@ npm run preview
 # ├── package.json
 # ├── postcss.config.js
 # └── tailwind.config.js
+
+# 11. INTÉGRATION DU TEMPLATE AI PROMPT
+# ----------------------------------
+# Copie du template Preline AI Prompt
+mkdir -p src/templates
+curl -o src/templates/ai-prompt.html https://preline.co/templates/ai-prompt/ai-with-sidebar.html
+
+# Adaptation du template
+# - Extraction des composants
+mkdir -p src/components
+touch src/components/Sidebar.js
+touch src/components/Chat.js
+touch src/components/Header.js
+
+# Configuration des routes
+npm install -D @vitejs/plugin-vue
+touch vite.config.js
+
+# 12. CONFIGURATION GITHUB PAGES
+# ---------------------------
+# Installation des outils de déploiement
+npm install -D gh-pages
+
+# Ajout du script de déploiement
+npm pkg set scripts.deploy="gh-pages -d dist"
+
+# Configuration du déploiement
+cat > .github/workflows/deploy.yml << 'EOL'
+name: Deploy to GitHub Pages
+on:
+  push:
+    branches: [ main ]
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install
+        run: npm ci
+      - name: Build
+        run: npm run build
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@4.1.5
+        with:
+          branch: gh-pages
+          folder: dist
+EOL
+
+# 13. SYSTÈME DE NAVIGATION
+# ----------------------
+# Installation du router
+npm install vue-router@4
+
+# Configuration des routes
+mkdir -p src/router
+touch src/router/index.js
+
+# Structure des routes
+cat > src/router/index.js << 'EOL'
+import { createRouter, createWebHistory } from 'vue-router'
+
+const routes = [
+  {
+    path: '/',
+    name: 'Episodes',
+    component: () => import('../views/Episodes.vue')
+  },
+  {
+    path: '/analyses',
+    name: 'Analyses',
+    component: () => import('../views/Analyses.vue')
+  }
+]
+
+export const router = createRouter({
+  history: createWebHistory(),
+  routes
+})
+EOL
+
+# 14. COMPOSANTS DE BASE
+# --------------------
+# Création des composants Vue
+mkdir -p src/components
+touch src/components/EpisodeList.vue
+touch src/components/AnalysisSidebar.vue
+touch src/components/ChatThread.vue
+touch src/components/MetaAnalysis.vue
+
+# 15. SYSTÈME DE BUILD PRODUCTION
+# ----------------------------
+# Configuration de la compression
+npm install -D compression-webpack-plugin
+
+# Configuration du build
+cat > vue.config.js << 'EOL'
+const CompressionPlugin = require('compression-webpack-plugin')
+
+module.exports = {
+  configureWebpack: {
+    plugins: [
+      new CompressionPlugin({
+        algorithm: 'gzip',
+        test: /\.(js|css|html|svg)$/,
+        threshold: 10240,
+        minRatio: 0.8
+      })
+    ]
+  }
+}
+EOL
+
+# 16. TESTS ET VALIDATION
+# ---------------------
+# Installation des outils de test
+npm install -D vitest @vue/test-utils
+npm install -D @testing-library/vue
+
+# Configuration des tests
+mkdir -p tests/unit
+touch tests/unit/EpisodeList.spec.js
+touch tests/unit/ChatThread.spec.js
+
+# Ajout du script de test
+npm pkg set scripts.test="vitest"
+npm pkg set scripts.coverage="vitest run --coverage"

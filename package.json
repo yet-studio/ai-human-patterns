@@ -1,0 +1,27 @@
+{
+  "name": "ai_meta_dialog",
+  "version": "1.0.0",
+  "description": "Une exploration terrain des interactions IA-Humain, présentée sous forme de série narrative, capturant et analysant des échanges réels qui révèlent les patterns émergents dans cette relation complexe.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com-ai-human-patterns:yet-studio/ai-human-patterns.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.5.1",
+    "tailwindcss": "^3.4.1"
+  },
+  "dependencies": {
+    "preline": "^2.7.0"
+  }
+}
