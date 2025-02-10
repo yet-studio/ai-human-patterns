@@ -13,9 +13,8 @@
 - Organisation des dialogues
 
 ### /web
-- `src/pages/ai-welcome-page.html` : Page d'accueil
 - Assets et styles
-- Interface utilisateur
+- Templates démo
 
 ## Documentation
 
