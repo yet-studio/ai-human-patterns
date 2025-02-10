@@ -12,7 +12,11 @@ Ce projet documente une expérience directe d'interactions IA-Humain dans un con
 - **Documentation** : Cas d'études et patterns identifiés
 
 ## Structure
-- `docs/` : Documentation et analyses
+- `working/` : Documents de travail et itérations
+  - `project_map.md` : Cartographie du projet
+  - `design-decisions.md` : Choix de présentation
+  - `ai-patterns.md` : Documentation des patterns
+- `docs/` : Documentation stabilisée
   - `premium-ai-sabotage-patterns-2024-2025.md` : Premier cas d'étude
 - `episodes/` : Séries d'interactions découpées
 - `analyses/` : Analyses meta et patterns identifiés
@@ -21,7 +25,7 @@ Ce projet documente une expérience directe d'interactions IA-Humain dans un con
 ## Développement
 - Template basé sur Preline UI
 - Déploiement via GitHub Pages
-- Documentation technique dans `working/`
+- Documentation évolutive dans `working/`
 
 ## Contribution
 Pour contribuer :
