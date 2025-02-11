@@ -1,0 +1,71 @@
+<!-- Simple Text Message -->
+<li class="max-w-4xl py-2 px-4 sm:px-6 lg:px-8 mx-auto flex gap-x-2 sm:gap-x-4">
+  <svg class="shrink-0 size-[38px] rounded-full" width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="38" height="38" rx="6" fill="#2563EB"/>
+    <path d="M10 28V18.64C10 13.8683 14.0294 10 19 10C23.9706 10 28 13.8683 28 18.64C28 23.4117 23.9706 27.28 19 27.28H18.25" stroke="white" stroke-width="1.5"/>
+  </svg>
+  <div class="grow max-w-[90%] md:max-w-2xl w-full space-y-3">
+    <div class="space-y-3">
+      <p class="text-sm text-gray-800 dark:text-white">Simple text message here</p>
+    </div>
+  </div>
+</li>
+
+<!-- Code Block -->
+<div class="bg-gray-800 rounded-lg overflow-hidden">
+  <div class="select-none p-4">
+    <div class="flex items-center justify-between">
+      <span class="text-xs text-gray-400">Code</span>
+      <button type="button" class="copy-to-clipboard inline-flex items-center gap-x-2 text-xs text-gray-400 hover:text-gray-200">
+        <span>Copy</span>
+        <svg class="size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="p-4 pt-0">
+    <pre class="text-white"><code>npm i preline</code></pre>
+  </div>
+</div>
+
+<!-- Table -->
+<div class="bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden dark:bg-neutral-900 dark:border-neutral-700">
+  <div class="-m-1.5 overflow-x-auto">
+    <div class="p-1.5 min-w-full inline-block align-middle">
+      <table class="min-w-full divide-y divide-gray-200 dark:divide-neutral-700">
+        <thead class="bg-gray-50 dark:bg-neutral-800">
+          <tr>
+            <th scope="col" class="px-6 py-3 text-start">
+              <div class="flex items-center gap-x-2">
+                <span class="text-xs font-semibold uppercase tracking-wide text-gray-800 dark:text-gray-200">Name</span>
+              </div>
+            </th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-200 dark:divide-neutral-700">
+          <tr>
+            <td class="size-px whitespace-nowrap">
+              <div class="px-6 py-3">
+                <span class="text-sm text-gray-600 dark:text-gray-400">Table content here</span>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- Image with Caption -->
+<div class="flex items-center gap-x-3">
+  <img class="inline-block size-[38px] rounded-full" src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80" alt="Image description">
+  <div class="grow">
+    <span class="block text-sm font-semibold text-gray-800 dark:text-gray-200">Image caption here</span>
+  </div>
+</div>
+
+<!-- Interactive Button -->
+<div class="inline-flex border border-gray-200 rounded-full p-0.5 dark:border-neutral-700">
+  <button type="button" class="inline-flex items-center gap-x-2 text-sm rounded-full text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-300 dark:hover:bg-neutral-800 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
+    <span class="px-3 py-2">Button text</span>
+  </button>
+</div>
