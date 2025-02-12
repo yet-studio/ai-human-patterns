@@ -22,6 +22,28 @@ Une documentation involontaire des comportements réels des systèmes IA premium
   3. Synopsis (optionnel, décalé)
   4. Large espace avant contenu principal
 
+### 3. Mode Série Narratif
+
+**Décision**
+Adoption d'un format série pour la présentation des dialogues IA-Humain.
+
+**Justification**
+- Cohérence narrative naturelle
+- Structure temporelle claire
+- Facilité de documentation
+- Support optimal du contexte
+
+**Implémentation**
+- Accroche minimaliste en entrée
+- Synopsis direct et concis
+- Hiérarchie visuelle intentionnelle
+- Espaces blancs comme éléments structurants
+
+**Validation**
+- Date : 11 Février 2025
+- Contexte : Définition du format de présentation
+- Référence : Step 374-384
+
 ## Principes Directeurs
 
 1. Authenticité

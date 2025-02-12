@@ -76,6 +76,25 @@
 - **Contexte** : Optimisation de l'assistance en mode read-only
 - **Validé le** : 11 Février 2025
 
+### ui_consistency
+- **Description** : Pattern de détection et documentation des incohérences UI/UX
+- **Déclencheur** : Observation d'éléments UI qui changent ou perdent leur état attendu
+- **Comportement** :
+  - Documentation immédiate du comportement inattendu
+  - Identification du moment de changement
+  - Capture du comportement attendu vs réel
+  - Exemple actuel: 
+    - T+0s: Bouton affiche correctement "Insert in Terminal"
+    - T+0.5s: Interface process remplace par "Insert"
+    - Cycle se répète à chaque nouvelle commande
+- **Validation** :
+  - Reproduction systématique du problème
+  - Timing précis du changement (0.5s)
+  - Impact sur l'expérience utilisateur
+  - Conflit entre processus UI
+- **Contexte** : Conflit entre le pattern terminal_insert et le processus UI
+- **Validé le** : 11 Février 2025
+
 ## Notes
 - Les patterns sont identifiés et documentés au fil des interactions
 - L'objectif est d'améliorer l'efficacité de la communication
