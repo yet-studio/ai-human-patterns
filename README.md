@@ -1,15 +1,15 @@
 # AI Human Patterns
 
-Une exploration terrain des interactions IA-Humain, présentée sous forme de série narrative, capturant et analysant des échanges réels qui révèlent les patterns émergents dans cette relation complexe.
+Une exploration sur le terrain des interactions IA-Humain, présentée sous forme de série narrative, capturant et analysant des échanges réels qui révèlent les schémas émergents dans cette relation complexe.
 
 ## À Propos
-Ce projet documente une expérience directe d'interactions IA-Humain dans un contexte de développement, adoptant un format narratif inspiré des séries pour maintenir l'engagement et la clarté. L'objectif est de fournir un témoignage concret et analysé de ces patterns, enrichi par des analyses "meta" sur la nature de ces interactions.
+Ce projet documente une expérience directe d'interactions IA-Humain dans un contexte de développement, adoptant un format narratif inspiré des séries pour maintenir l'engagement et la clarté. L'objectif est de fournir un témoignage concret et analysé de ces schémas d'interaction, enrichi par des analyses "meta" sur la nature de ces échanges.
 
 ## Format
 - **Format Série** : Découpage des dialogues en épisodes thématiques
 - **Alternance** : Passages narratifs et analyses contextuelles
-- **Meta-Analyse** : Réflexions sur les patterns d'interaction observés
-- **Documentation** : Cas d'études et patterns identifiés
+- **Meta-Analyse** : Réflexions sur les schémas d'interaction observés
+- **Documentation** : Cas d'études et schémas identifiés
 
 ## Structure
 - `working/` : Documents de travail et itérations
