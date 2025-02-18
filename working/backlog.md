@@ -2,6 +2,24 @@
 # Version: 2024-2025
 # Basé sur Preline UI + Tailwind CSS
 
+# 0. STRATÉGIE MVP
+# ---------------
+# Phase 1 - Focus sur le contenu
+mkdir -p working/episodes working/patterns
+
+# Structure MVP initiale
+# working/
+# ├── episodes/        # Interactions IA-Humain documentées
+# │   └── ep01.md     # Format: Contexte > Dialogue > Pattern
+# └── patterns/       # Patterns identifiés et documentés
+#     └── pattern01.md
+
+# Processus MVP:
+# 1. Documenter les interactions réelles
+# 2. Identifier les patterns émergents
+# 3. Itérer et affiner
+# 4. Structurer progressivement
+
 # 1. INITIALISATION DU PROJET
 # ---------------------------
 # Création du projet
