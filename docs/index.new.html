@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Essential Meta Tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="AI Human Patterns - Exploring AI-Human Interactions">
+  <title>AI Human Patterns</title>
+  
+  <!-- Favicon Configuration -->
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="manifest" href="favicon/site.webmanifest">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://preline.co/assets/css/main.min.css">
+  
+  <!-- Alpine.js -->
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  
+  <script>
+    const html = document.querySelector('html');
+    const theme = localStorage.getItem('hs_theme') || 'light';
+    const isDark = theme === 'dark' || (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if (isDark) html.classList.add('dark');
+  </script>
+</head>
+
+<body class="dark:bg-neutral-900">
+  <!-- Load SVG Sprites -->
+  <div class="hidden">
+    <object id="ui-icons" type="image/svg+xml" data="assets/svg/ui-icons.svg"></object>
+  </div>
+
+  <!-- Sidebar -->
+  <div id="hs-application-sidebar" class="hs-overlay [--auto-close:lg] hs-overlay-open:translate-x-0 -translate-x-full duration-300 transform hidden fixed top-0 start-0 bottom-0 z-[60] w-64 bg-white border-e border-gray-200 overflow-y-auto lg:block lg:translate-x-0 lg:end-auto lg:bottom-0 [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:bg-gray-300 dark:[&::-webkit-scrollbar-track]:bg-neutral-700 dark:[&::-webkit-scrollbar-thumb]:bg-neutral-500 dark:bg-neutral-900 dark:border-neutral-700">
+    <nav class="size-full flex flex-col">
+      <div class="flex items-center justify-between pt-4 pe-4 ps-7">
+        <!-- Logo -->
+        <a class="flex-none focus:outline-none focus:opacity-80" href="index.html" aria-label="Preline">
+          <img src="assets/svg/logo.svg" class="w-28 h-auto" alt="Preline Logo" width="116" height="32">
+        </a>
+        <!-- End Logo -->
+      </div>
+
+      <div class="h-full">
+        <!-- List -->
+        <ul class="space-y-1.5 p-4">
+          <li>
+            <a class="flex items-center gap-x-3 py-2 px-3 text-sm text-gray-700 rounded-lg hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-900 dark:hover:text-neutral-300 dark:focus:bg-neutral-900 dark:focus:text-neutral-300" href="#">
+              <svg class="shrink-0 size-4">
+                <use href="#icon-new-chat"></use>
+              </svg>
+              New chat
+            </a>
+          </li>
+          <li>
+            <a class="flex items-center gap-x-3 py-2 px-3 text-sm text-gray-700 rounded-lg hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-900 dark:hover:text-neutral-300 dark:focus:bg-neutral-900 dark:focus:text-neutral-300" href="#">
+              <svg class="shrink-0 size-4">
+                <use href="#icon-discord"></use>
+              </svg>
+              Preline AI Discord
+            </a>
+          </li>
+          <li>
+            <a class="flex items-center gap-x-3 py-2 px-3 text-sm text-gray-700 rounded-lg hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-900 dark:hover:text-neutral-300 dark:focus:bg-neutral-900 dark:focus:text-neutral-300" href="#">
+              <svg class="shrink-0 size-4">
+                <use href="#icon-save"></use>
+              </svg>
+              Save conversation
+            </a>
+          </li>
+          <li>
+            <a class="flex items-center gap-x-3 py-2 px-3 text-sm text-gray-700 rounded-lg hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-900 dark:hover:text-neutral-300 dark:focus:bg-neutral-900 dark:focus:text-neutral-300" href="#">
+              <svg class="shrink-0 size-4">
+                <use href="#icon-updates"></use>
+              </svg>
+              Updates &amp; FAQ
+            </a>
+          </li>
+          <li>
+            <a class="flex items-center gap-x-3 py-2 px-3 text-sm text-gray-700 rounded-lg hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-900 dark:hover:text-neutral-300 dark:focus:bg-neutral-900 dark:focus:text-neutral-300" href="#">
+              <svg class="shrink-0 size-4 text-blue-600">
+                <use href="#icon-upgrade"></use>
+              </svg>
+              <span class="bg-clip-text bg-gradient-to-tl from-blue-600 to-violet-600 text-transparent">Upgrade Plan</span>
+            </a>
+          </li>
+        </ul>
+        <!-- End List -->
+      </div>
+
+      <!-- Footer -->
+      <div class="mt-auto">
+        <div class="py-2.5 px-7">
+          <p class="inline-flex items-center gap-x-2 text-xs text-green-600">
+            <span class="block size-1.5 rounded-full bg-green-600"></span>
+            Active 12,320 people
+          </p>
+        </div>
+      </div>
+      <!-- End Footer -->
+    </nav>
+  </div>
+  <!-- End Sidebar -->
+
+  <!-- Content -->
+  <div class="relative h-screen w-full lg:ps-64">
+    <!-- Chat Content Here -->
+  </div>
+  <!-- End Content -->
+
+  <!-- Scripts -->
+  <script>
+    // Initialize SVG icons
+    document.addEventListener('DOMContentLoaded', function() {
+      const iconObject = document.getElementById('ui-icons');
+      iconObject.addEventListener('load', function() {
+        const svgDoc = iconObject.contentDocument;
+        const symbols = svgDoc.querySelectorAll('symbol');
+        symbols.forEach(symbol => {
+          const id = symbol.id;
+          const viewBox = symbol.getAttribute('viewBox');
+          const paths = symbol.innerHTML;
+          
+          const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+          svg.id = id;
+          svg.setAttribute('viewBox', viewBox);
+          svg.innerHTML = paths;
+          
+          document.body.appendChild(svg);
+        });
+      });
+    });
+  </script>
+</body>
+</html> 
